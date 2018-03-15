@@ -16,22 +16,9 @@ class TempGetter(Thread):
 
     def run(self):
         url_template = (
-            'http://api.openweathermap.org/data/2.5/'
-            'weather?q={},CA&units=metric')
+            'http://api.openweathermap.org/data/2.5/weather'
+            '?q={}&APPID=039b52688b0e58330ebdbd55e45c27ba')
         response = urlopen(url_template.format(self.city))
-        data = json.loads(response.read().decode())
+        data = json.loads(response.read())
         self.temperature = data['main']['temp']
 
-
-threads = [TempGetter(c) for c in CITIES]
-start = time.time()
-for thread in threads:
-    thread.start()
-
-for thread in threads:
-    thread.join()
-
-for thread in threads:
-    print("it is {0.temperature:.0f}°C in {0.city}".format(thread))
-
-print("Got {} temps in {} seconds".format(len(threads), time.time() - start))
