@@ -24,6 +24,10 @@ def test_patch(tracker):
     fake_now = datetime(2015, 4, 1)
     with patch('datetime.datetime') as dt:
         dt.now.return_value = fake_now
+<<<<<<< HEAD
         tracker.change_status("AC102", "on time")
+=======
+        tracker.change_status("AC101", "on time")
+>>>>>>> b829bcb465b0e32104dbe492037b6da0f67e9948
     dt.now.assert_called_once_with()
     tracker.redis.set.assert_called_once_with("flightno:AC102", "2015-04-01T00:00:00|ON TIME")

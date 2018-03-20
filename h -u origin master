@@ -1,0 +1,25 @@
+[33mcommit d4fd26689e18c213d151bbb032be5de381487620[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: danertor <danertor@users.noreply.github.com>
+Date:   Tue Mar 6 19:47:21 2018 -0500
+
+    start of parallel concurrency with threading
+
+[33mcommit afa5188f95073414de8a422278fef1f61eb5b17d[m
+Author: danertor <danertor@users.noreply.github.com>
+Date:   Mon Feb 26 22:19:30 2018 -0500
+
+    funcargs commit
+    
+    funcargs commit
+
+[33mcommit 814c9d0a7b2bb103c8f2f00a2adffb67b1e6180b[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: danertor <danertor@users.noreply.github.com>
+Date:   Thu Feb 22 17:44:58 2018 -0500
+
+    initial
+
+[33mcommit 462c863beabce20b3377db02d784b86362671448[m
+Author: danertor <danertor@users.noreply.github.com>
+Date:   Thu Feb 22 11:45:18 2018 -0500
+
+    Initial commit

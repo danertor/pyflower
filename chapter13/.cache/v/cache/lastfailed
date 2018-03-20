@@ -1,0 +1,4 @@
+{
+  "test_threads_temperatures.py": true,
+  "test_threads_temperatures.py::test_get_temperatures": true
+}
