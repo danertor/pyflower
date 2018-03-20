@@ -1,0 +1,12 @@
+{"mailling": [
+   {
+  "email": "email1@mydomain.com",
+    "groups": ["group1","group2"]
+	},
+   {  
+  "email": "email2@mydomain.com",
+    "groups": ["group2","group3"]	
+   }
+   ]
+}
+
