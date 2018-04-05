@@ -2,6 +2,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from os.path import sep as pathsep
 from collections import deque
+#from icecream import ic
 
 def find_files(path, query_string):
     subdirs = []
