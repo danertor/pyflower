@@ -32,7 +32,18 @@ class DNSProtocol(asyncio.DatagramProtocol):
     def datagram_received(self, data, addr):
         print("Received request from {}".format(addr[0]))
         domain, ip = lookup_dns(data)
-        ...
+        print("Sending IP {} for {} to {}".format(domain.decode(), ip, addr[0]))
+        self.transport.sendto(create_response(data, ip), addr)
+
+
+loop = asyncio.get_event_loop()
+transport, protocol = loop.run_until_complete(loop.create_datagram_endpoint(DNSProtocol, local_addr=('127.0.0.1', 4343)))
+print("DNS Server running")
+
+with suppress(KeyboardInterrupt):
+    loop.run_forever()
+transport.close()
+loop.close()
 
 
 
